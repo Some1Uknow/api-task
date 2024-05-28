@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 function BeerCard({ beer }) {
   return (
     <div className="card overflow-hidden bg-white rounded-lg shadow-md">
-      <img src={beer.image} alt={beer.name} className="w-full h-96 object-cover" />
+      <img src={beer.image} alt={beer.name} className="w-full h-72 object-cover" />
       <div className="p-4">
         <h2 className="text-xl font-bold">{beer.name}</h2>
         <p className="text-gray-600">{beer.tagline}</p>
@@ -28,7 +28,7 @@ function App() {
     <div className="bg-gray-100 p-8">
       <div className="max-w-6xl mx-auto">
       <p className='font-sans text-5xl mb-4 font-semibold'>Beer Data</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {beers.map(beer => (
             <BeerCard key={beer.id} beer={beer} />
           ))}
